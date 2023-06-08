@@ -1,0 +1,2 @@
+1. (pusda)tampilan awal di upt pada aksi hapus dan edit belum di sempurnakan
+2. (tambah)ketika berhasil menambahkan data masih belum ada pop up berhasil
