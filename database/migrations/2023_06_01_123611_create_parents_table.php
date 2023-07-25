@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('alamat');
             $table->string('luas');
             $table->integer('nilai_aset');
-            $table->string('upt');
+            // $table->string('upt');
             $table->timestamps(); 
 
         });

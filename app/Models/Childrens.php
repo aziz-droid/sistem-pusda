@@ -10,4 +10,8 @@ class Childrens extends Model
     use HasFactory;
     protected $guarded = ['id'];
     
+    public function parents()
+    {
+        return $this->belongsTo(Childrens::class);
+    }
 }

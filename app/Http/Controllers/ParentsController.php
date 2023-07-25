@@ -62,8 +62,7 @@ class ParentsController extends Controller
     public function show(string $id)
     {
          //get post by ID
-         $parent = Parents::findOrFail($id);
-
+         $parent = Parents::with('childrens')->findOrFail($id);
          //render view with post
          return view('upt.detail', compact('parent'), [
             'title'=>'pusda',

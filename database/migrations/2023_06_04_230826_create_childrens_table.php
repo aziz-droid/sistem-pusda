@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('childrens', function (Blueprint $table) {
             $table->id();
-            // $table->bigInteger('parent_id')->unsigned();
+            $table->bigInteger('parents_id')->unsigned();
             $table->enum('penggunaan_pemanfaatan',['pinjam_pakai','pakai_sendiri','sewa_sip_bmd','retribusi']);
             $table->string('atas_nama')->nullable();
             $table->string('peruntukkan')->nullable();
@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('surat_permohonan')->nullable();
             $table->string('kondisi saat ini')->nullable();
             $table->timestamps();
-            // $table->foreign('parent_id')->references('id')->on('parents')->onDelete('cascade');
+            $table->foreign('parents_id')->references('id')->on('parents')->onDelete('cascade');
         });
     }
 

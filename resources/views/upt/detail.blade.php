@@ -86,58 +86,34 @@
     
     <table class="table table-striped table-sm">
       <tbody> 
-        @foreach ($childrens as $children )
+        @foreach ($parent->childrens as $children )
     
-        <tr>
-          <th class="align-middle text-center" scope="row"><a href="pusda/detail" class="text-black text-decoration-none"></a></th>
-          <td class="align-middle text-center">
-            <p class="text-body-tertiary m-0" style="font-size: 12px">PENGGUNAAN/<br>PEMANFAATAN</p>
-            <P>pinjam pakai</P>
-          </td>
-          <td class="align-middle text-center">
-            <p class="text-body-tertiary m-0" style="font-size: 12px">PEMANFAATAN</p>
-            <P>PINJAM PAKAI </P>
-          </td>
-          <td class="align-middle text-center">
-            <p class="text-body-tertiary m-0" style="font-size: 12px">KONDISI SAAT INI</p>
-            <P>PINJAM PAKAI </P>
-          </td>
-          <td class="align-middle text-center">
-            <p class="text-body-tertiary m-0" style="font-size: 12px">LUAS</p>
-            <P>PINJAM PAKAI </P>
-          </td>
-          <td class="align-middle text-center"></td>
-          <td class="align-middle text-center"></td>
-          <td class="align-middle text-center">
-            <p class="text-body-tertiary m-0" style="font-size: 12px"><a class="" href="/pusda/detail/detail_pinjam">DETAIL</a></p>
-          </td>
-        </tr>
         <tr>
           <th class="align-middle text-center" scope="row"><a href="pusda/detail" class="text-black text-decoration-none">1</a></th>
           <td class="align-middle text-center">
             <p class="text-body-tertiary m-0" style="font-size: 12px">PENGGUNAAN/<br>PEMANFAATAN</p>
-            <P>PINJAM PAKAI </P>
+            <P>{{ $children->penggunaan_pemanfaatan }}</P>
           </td>
          
           <td class="align-middle text-center">
             <p class="text-body-tertiary m-0" style="font-size: 12px">PEMANFAATAN</p>
-            <P>PINJAM PAKAI </P>
+            <P>{{ $children->peruntukkan }}</P>
           </td>
           <td class="align-middle text-center">
             <p class="text-body-tertiary m-0" style="font-size: 12px">NO PERIKATAN</p>
-            <P>PINJAM PAKAI </P>
+            <P>{{ $children->nomor_perikatan }}</P>
           </td>
           <td class="align-middle text-center">
             <p class="text-body-tertiary m-0" style="font-size: 12px">LUAS</p>
-            <P>PINJAM PAKAI </P>
+            <P>{{ $children->luas }}</P>
           </td>
           <td class="align-middle text-center">
             <p class="text-body-tertiary m-0" style="font-size: 12px">NILAI SEWA</p>
-            <P>PINJAM PAKAI </P>
+            <P>{{ $children->nilai }}</P>
           </td>
           <td class="align-middle text-center">
             <p class="text-body-tertiary m-0" style="font-size: 12px">MASA BERLAKU</p>
-            <P>PINJAM PAKAI </P>
+            <P>{{ $children->berlaku_dari }} - {{ $children->berlaku_sampai }}</P>
           </td> 
           <td class="align-middle text-center">
             <p class="text-body-tertiary m-0" style="font-size: 12px"><a href="/pusda/detail/detail_sewa">DETAIL</a></p>

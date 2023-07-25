@@ -13,27 +13,27 @@ class ChildrensController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $childer = Childrens::all();
-        return view('upt.detail',[
-            'title' => 'pusda',
-            'header' =>'UPT PSDA WS BRANTAS KEDIRI',
-            'childer' => $childer
-        ]);
-        // $childrens = Childrens::latest()->paginate(5);
-        // //render view with posts
-        // return view('upt.detail', compact('childrens'), [
-        //     'childrens'=> $childrens
-        // ]);
-    }
+    // public function index()
+    // {
+    //     $childer = Childrens::all();
+    //     return view('upt.detail',[
+    //         'title' => 'pusda',
+    //         'header' =>'UPT PSDA WS BRANTAS KEDIRI',
+    //         'childer' => $childer
+    //     ]);
+    // }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function createPinjam()
     {
-        //
+        return view ('upt.bagian.tambah_pinjam');   
+    }
+    
+    public function createSewa()
+    {
+        return view ('upt.bagian.tambah_sewa');
     }
 
     /**

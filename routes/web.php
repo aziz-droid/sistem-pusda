@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 
 Route::resource('/pusda', ParentsController::class);
-Route::resource('/pusda/{id}', ChildrensController::class);
+Route::resource('/children', ChildrensController::class);
  
 // Route::get('/pusda/detail', function (){
 //     return view('upt.detail',[

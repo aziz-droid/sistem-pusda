@@ -26,7 +26,7 @@
     </thead>
     <tbody> 
       @foreach ($parents as $parent )
-      <tr>
+      <tr> 
         <th class="align-middle text-center" scope="row"><a href="/pusda/{{ $parent->id }}" class="text-black text-decoration-none">{{ $loop->iteration }}</a></th>
         <td class="align-middle text-center" style="width: 100px">{{ $parent->nomor_sertifikat }}</td>
         <td class="align-middle text-center">{{ $parent->tanggal_sertifikat }}</td>
